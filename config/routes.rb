@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get 'welcome/hi' => 'welcome#index'
   #for make the first page
   root 'welcome#index'
-  resources;posts
+  resources :posts
 
 end
