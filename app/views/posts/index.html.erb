@@ -4,27 +4,67 @@
 <<%= link_to  "Add Post", new_post_path %>>
 <br>
 <br>
-<% @posts.each do |post| %>
-  <label>ID</label>
-   <%= post.id %>
-    <br>
-  <label>Title</label>
-   <%= post.title %>
-    <br>
-  <label>Text</label>
-    <%= post.text %>
-    <br>
-  <label>Created at</label>
-    <%= post.created_at %>
-    <br>
-  <label>Updataed at</label>
-    <%= post.updated_at %>
-    <br>
+<table border="1">
+  <tr>
+    <th colspan="2">ID    </th>
 
-  <%= link_to  "Edit Post",  edit_post_path(post) %>
-  <%= link_to  "Delete Post",  post_path(post) , method: :delete %>
-  <br>
-  <br>
-  <%= '=' * 100 %>
-  <br>
+    <th colspan="2">Title</th>
+
+
+    <th colspan="2">Text</th>
+
+
+    <th colspan="2">Created at</th>
+
+    <th colspan="2">Updataed at</th>
+
+  </tr>
+<% @posts.each do |post| %>
+    <tr>
+      <td colspan="2"><%= post.id %></td>
+
+
+      <td colspan="2"><%= post.title %></td>
+
+
+      <td colspan="2"><%= post.text %></td>
+
+      <td colspan="2"><%= post.created_at  %></td>
+
+      <td colspan="2"><%= post.updated_at %></td>
+
+      <td colspan="2"><%= link_to 'Show', post_path(post) %></td>
+
+      <td colspan="2"><%= link_to 'Edit', edit_post_path(post) %></td>
+
+      <td colspan="2"><%= link_to 'Delete', post_path(post),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+
+
+
+<!--  <label>ID</label>-->
+   <%#= post.id %>
+<!--    <br>-->
+<!--  <label>Title</label>-->
+   <%#= post.title %>
+<!--    <br>-->
+<!--  <label>Text</label>-->
+    <%#= post.text %>
+<!--    <br>-->
+<!--  <label>Created at</label>-->
+    <%#= post.created_at %>
+<!--    <br>-->
+<!--  <label>Updataed at</label>-->
+    <%#= post.updated_at %>
+<!--    <br>-->
+
+  <%#= link_to  "Edit ",  edit_post_path(post) %>
+  <%#= link_to  "Delete ",  post_path(post) , method: :delete , data: { confirm: 'Are you confirm'} %>
+<!--  <br>-->
+<!--  <br>-->
+  <%#= '=' * 100 %>
+<!--  <br>-->
 <% end %>
+</table>

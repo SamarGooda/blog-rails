@@ -5,19 +5,23 @@ class PostsController < ApplicationController
   def create
     @post = Post.new( post_params)
 
-    @post.save
-    redirect_to @post
+    if @post.save
+      redirect_to @post
+    end
   end
   def new
     @post=Post.new
   end
   def edit
     @post = Post.find(params[:id])
-    if @post.edit
-
-    end
   end
+  ##########################################3
   def update
+    @post = Post.find(params[:id])
+
+    if @post.update(post_params)
+      redirect_to @post
+    end
   end
   def show
     @post = Post.find(params[:id])
