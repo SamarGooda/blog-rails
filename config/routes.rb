@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   #defult if I write this linke it will search about controller with the same name
   get 'welcome/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
