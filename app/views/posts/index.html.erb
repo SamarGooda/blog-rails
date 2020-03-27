@@ -1,2 +1,30 @@
-<h1>posts#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Posts Listing</h1>
+<br>
+<br>
+<<%= link_to  "Add Post", new_post_path %>>
+<br>
+<br>
+<% @posts.each do |post| %>
+  <label>ID</label>
+   <%= post.id %>
+    <br>
+  <label>Title</label>
+   <%= post.title %>
+    <br>
+  <label>Text</label>
+    <%= post.text %>
+    <br>
+  <label>Created at</label>
+    <%= post.created_at %>
+    <br>
+  <label>Updataed at</label>
+    <%= post.updated_at %>
+    <br>
+
+  <%= link_to  "Edit Post",  edit_post_path(post) %>
+  <%= link_to  "Delete Post",  post_path(post) , method: :delete %>
+  <br>
+  <br>
+  <%= '=' * 100 %>
+  <br>
+<% end %>
