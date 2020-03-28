@@ -35,6 +35,7 @@ gem 'better_errors', '~> 2.4'
 gem 'bulma-rails', '~> 0.8.0'
 
 gem 'bootstrap','~> 4.4', '>= 4.4.1'
+# gem 'bootstrap', '~> 4.0'
 
 # #simple form
 # gem 'simple_form', '~> 5.0', '>= 5.0.2'
