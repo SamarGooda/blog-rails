@@ -15,6 +15,6 @@ A simple blog web application using RubyOnRails
   <li> clone the repo</li>
   <li>run bundle install</li>
   <li>configure database in mysql server according to configurations from database.yml</li>
-<li>   run rails db:migrations</li>
+<li> run rails db:migrations</li>
    <li> start the server rails server</li>
 </ul>
