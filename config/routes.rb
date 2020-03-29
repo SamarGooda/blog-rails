@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :comments
   #defult if I write this linke it will search about controller with the same name
   get 'welcome/index'
