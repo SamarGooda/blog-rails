@@ -1,9 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple blog web application using RubyOnRails
 
-Things you may want to cover:
+<h3>Dependencies</h3>
 
 * Ruby version
 
