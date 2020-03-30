@@ -7,5 +7,6 @@ class CreateComments < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_foreign_key :posts, :comments, on_delete: :cascade
   end
 end
